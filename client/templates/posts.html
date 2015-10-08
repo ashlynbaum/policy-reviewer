@@ -1,0 +1,16 @@
+<template name="posts">
+  <div class="posts">
+    {{#each posts}}
+      {{> post}}
+    {{/each}}
+  </div>
+  <form class="new-post">
+    <input type="text" name="text" placeholder="Type to add a new post" />
+  </form>
+</template>
+
+<template name="post">
+  <div class="post">
+    {{text}}
+  </div>
+</template>

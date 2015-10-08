@@ -25,14 +25,11 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-md-3"> hello world </div>
-      <div class="col-md-9"> 9 column</div>
+      <div class="col-md-3">
+        {{> posts}}
+      </div>
+      <div class="col-md-9">{{> text}}</div>
     </div>
   </div>
-  {{> hello}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
