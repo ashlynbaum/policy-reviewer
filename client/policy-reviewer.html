@@ -1,0 +1,35 @@
+<head>
+  <title>policy-reviewer</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+    </div>
+    <div class="navbar pull-right">
+      {{> loginButtons}}
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"> hello world </div>
+      <div class="col-md-9"> 9 column</div>
+    </div>
+  </div>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
