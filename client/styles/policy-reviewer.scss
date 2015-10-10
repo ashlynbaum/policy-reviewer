@@ -1,0 +1,24 @@
+@import '{reywood:bootstrap3-sass}/bootstrap';
+
+// variables
+$background: #f5f8fa;
+$blue: #3097D1;
+$white: #fff;
+
+// General
+body{
+  background-color: $background;
+}
+
+
+// Navbar
+nav{
+  &.navbar.navbar-inverse {
+    border-radius: 0;
+  }
+}
+
+// Comments
+.posts {
+  color:green
+}
