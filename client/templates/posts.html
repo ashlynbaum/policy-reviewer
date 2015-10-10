@@ -1,0 +1,20 @@
+<template name="posts">
+  <div class="posts">
+    {{#each posts}}
+      {{> post}}
+    {{/each}}
+  </div>
+  <form class="new-post">
+    <input type="text" name="text" placeholder="Type to add a new post" />
+  </form>
+</template>
+
+<template name="post">
+  <div class="post">
+    <div width=20px style="float:left">
+      <i class="fa fa-arrow-up up"> </i>{{up}}<br>
+      <i class="fa fa-arrow-down down"> </i>{{down}}
+    </div>
+    <div>{{text}}</div>
+  </div><br>
+</template>
