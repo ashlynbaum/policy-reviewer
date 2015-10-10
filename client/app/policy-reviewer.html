@@ -15,7 +15,8 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link</a></li>
+          <li class="active"><a href="#">Link</a>
+          </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}} <!-- here -->
@@ -28,7 +29,23 @@
       <div class="col-md-3">
         {{> posts}}
       </div>
-      <div class="col-md-9">{{> text}}</div>
+      <div class="col-md-9 well document">
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-info">Document Section</button>
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <p>{{> text}}</p>
+      </div>
     </div>
   </div>
 </body>
