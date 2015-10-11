@@ -1,20 +1,43 @@
 <template name="posts">
+  <form class="new-post">
+  <textarea class="form-control" name="text" type="text" required="true" autofocus="false" placeholder="Type to add a new comment."></textarea>
+    <!-- <input class="form-control" type="text" name="text" placeholder="Type to add a new comment" rows="10"/> -->
+    <input type="radio" name="text-vote" id="upvote" value="upvote"> upvote
+    <input type="radio" name="text-vote" value="downvote"> downvote
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <!-- <radio>v</radio> -->
+  </form>
+
   <div class="posts">
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">
     {{#each posts}}
       {{> post}}
     {{/each}}
+    </div>
   </div>
-  <form class="new-post">
-    <input class="form-control" type="text" name="text" placeholder="Type to add a new post" />
-  </form>
+  </div>
 </template>
 
 <template name="post">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseInnerOne">
+          Collapsible Inner Group Item #1
+        </a>
+      </div>
   <div class="post">
-    <div width=20px style="float:left">
+    <div>{{text}}</div>
+    <div class="row">
+      <div>4 comments</div>
       <i class="fa fa-arrow-up up"> </i>{{up}}<br>
       <i class="fa fa-arrow-down down"> </i>{{down}}
     </div>
-    <div>{{text}}</div>
-  </div><br>
+    <div class="sub-comment">
+      <div>Sub comment 1</div>
+      <div class="row">
+        <i class="fa fa-arrow-up up"> </i>{{up}}<br>
+        <i class="fa fa-arrow-down down"> </i>{{down}}
+      </div>
+    </div>
+  </div>
 </template>

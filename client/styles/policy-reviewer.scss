@@ -20,10 +20,16 @@ nav{
 
 // Comments
 .posts {
-  color:green
+  // color: green;
+}
+.post{
+
 }
 
 // Text
+.text{
+  border-left: 1px solid #ccc;
+}
 .document.well{
   background-color: $white;
 }
