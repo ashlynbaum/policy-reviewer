@@ -20,23 +20,44 @@
 </template>
 
 <template name="post">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseInnerOne">
-          Collapsible Inner Group Item #1
-        </a>
-      </div>
-  <div class="post">
-    <div>{{text}}</div>
+  <div class="posts">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseInnerOne">
+      {{text}}
+      </a>
+    </div>
     <div class="row">
       <div>4 comments</div>
       <i class="fa fa-arrow-up up"> </i>{{up}}<br>
       <i class="fa fa-arrow-down down"> </i>{{down}}
     </div>
-    <div class="sub-comment">
-      <div>Sub comment 1</div>
-      <div class="row">
-        <i class="fa fa-arrow-up up"> </i>{{up}}<br>
-        <i class="fa fa-arrow-down down"> </i>{{down}}
+
+    <!-- inner accordion for sub comments -->
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <!-- TODO: extract into subpost template -->
+        <div class="accordion" id="accordion2">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseInnerOne">
+                Collapsible Inner Group Item #1
+              </a>
+            </div>
+            <div id="collapseInnerOne" class="accordion-body collapse in">
+              <div class="accordion-inner">
+                Anim pariatur cliche...
+              </div>
+            </div>
+          </div>
+
+          <div class="sub-comment">
+            <div>Sub comment 1</div>
+            <div class="row">
+              <i class="fa fa-arrow-up up"> </i>{{up}}<br>
+              <i class="fa fa-arrow-down down"> </i>{{down}}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
